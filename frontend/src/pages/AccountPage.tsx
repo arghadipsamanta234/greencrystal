@@ -1,0 +1,3 @@
+import {useStore} from '../context/StoreContext'
+import {PageFrame,PageHeading} from '../components/Shared'
+export default function AccountPage(){const {navigate}=useStore();return <PageFrame narrow><PageHeading eyebrow="YOUR GREENCRYSTAL" title="My Account" note="Your orders and saved favourites, all in one place."/><div className="account-links"><button onClick={()=>navigate('/orders')}><span className="tile-icon">▤</span><span><strong>Orders</strong><small>View order details, status, returns and replacements</small></span><b>→</b></button><button onClick={()=>navigate('/wishlist')}><span className="tile-icon">♡</span><span><strong>Wishlist</strong><small>Products you have saved for later</small></span><b>→</b></button></div></PageFrame>}
